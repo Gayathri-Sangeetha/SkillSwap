@@ -25,8 +25,6 @@ const CallPage = () => {
     enabled: !!authUser,
   });
 
-  // Extract session ID from channelId (format: sessionId-timestamp or similar)
-  // Adjust this based on how you create channelId
   const sessionId = channelId?.split("-")[0];
 
   const { data: session } = useQuery({
@@ -35,7 +33,7 @@ const CallPage = () => {
     enabled: !!sessionId,
   });
 
-  // Initialize video client and call
+
   useEffect(() => {
     if (!tokenData?.token || !authUser || !channelId) return;
 
