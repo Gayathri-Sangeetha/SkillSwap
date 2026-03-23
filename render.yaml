@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Skill-Swap
+    name: skill-swap
     runtime: node
     plan: free
     buildCommand: npm run build
@@ -8,15 +8,21 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+
       - key: PORT
         value: 10000
+
       - key: MONGO_URI
-        scope: run
+        sync: false
+
       - key: JWT_SECRET_KEY
-        scope: run
+        sync: false
+
       - key: STREAM_API_KEY
-        scope: run
+        sync: false
+
       - key: STREAM_API_SECRET
-        scope: run
+        sync: false
+
       - key: FRONTEND_URL
-        scope: run
+        sync: false
