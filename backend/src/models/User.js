@@ -21,10 +21,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    profilePic: {
-      type: String,
-      default: "",
-    },    
+    // profilePic: {
+    //   type: String,
+    //   default: "",
+    // },    
     // NEW: Skills system
     skillsToTeach: [{
       skill: { type: String, required: true },
